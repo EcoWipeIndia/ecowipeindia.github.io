@@ -26,7 +26,7 @@
 				<h2>We Wash, You Save</h2>
 				<p>We provide professional waterless car cleaning services purposed towards saving water.</p>
 				<ul class="actions">
-					<li><a href="http://youtu.be/SBHAJdDXc9A" id="video-modal" class="button scrolly">Discover<i class="fa fa-play" aria-hidden="true"></i></a></li>
+					<li><a href="http://youtu.be/SBHAJdDXc9A" id="video-modal" class="mfp-iframe button scrolly">Discover<i class="fa fa-play" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</section>
@@ -164,13 +164,16 @@
 		<script data-cfasync="false" type="text/javascript">
 			$(document).ready(function() {
   			$('#video-modal').magnificPopup({
-  					disableOn: 700,
-		        type: 'iframe',
-		        mainClass: 'mfp-fade',
-		        removalDelay: 160,
-		        preloader: false,
-		        fixedContentPos: false
-  				});
+					iframe: {
+						patterns: {
+							youtube_short: {
+							  index: 'youtu.be/',
+							  id: 'youtu.be/',
+							  src: '//www.youtube.com/embed/%id%?autoplay=1'
+							}
+						}
+					}
+				});
 			});
 		  // Client side email validation Requested by Naza ... See: http://stackoverflow.com/a/46181
 		  function validEmail(email) {
