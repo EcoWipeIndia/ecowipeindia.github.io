@@ -19,7 +19,6 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-
 		<!-- Header -->
 		<section id="header">
 			<div class="inner">
@@ -27,7 +26,7 @@
 				<h2>We Wash, You Save</h2>
 				<p>We provide professional waterless car cleaning services purposed towards saving water.</p>
 				<ul class="actions">
-					<li><a href="#one" class="button scrolly">Discover</a></li>
+					<li><a href="http://youtu.be/SBHAJdDXc9A" id="video-modal" class="button scrolly">Discover<i class="fa fa-play" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</section>
@@ -163,6 +162,16 @@
 
 		<!-- Form submission handler to GoogleDocs -->
 		<script data-cfasync="false" type="text/javascript">
+			$(document).ready(function() {
+  			$('#video-modal').magnificPopup({
+  					disableOn: 700,
+		        type: 'iframe',
+		        mainClass: 'mfp-fade',
+		        removalDelay: 160,
+		        preloader: false,
+		        fixedContentPos: false
+  				});
+			});
 		  // Client side email validation Requested by Naza ... See: http://stackoverflow.com/a/46181
 		  function validEmail(email) {
 		    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -175,7 +184,7 @@
 		      email      : document.getElementById("email").value,
 					number      : document.getElementById("number").value,
 					address      : document.getElementById("address").value,
-		    }
+		    };
 		    console.log(data);
 		    return data;
 		  }
@@ -205,8 +214,8 @@
 		      };
 		      // url encode form data for sending as post data
 		      var encoded = Object.keys(data).map(function(k) {
-		          return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-		      }).join('&')
+		          return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]);
+		      }).join('&');
 		      xhr.send(encoded);
 		    }
 		  }
@@ -215,8 +224,10 @@
 		    // bind to the submit event of our form
 		    var form = document.getElementById('gform');
 		    form.addEventListener("submit", handleFormSubmit, false);
-		  };
+		  }
 		  document.addEventListener('DOMContentLoaded', loaded, false);
+		</script>
+		<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')
 		</script>
 	</body>
 </html>
