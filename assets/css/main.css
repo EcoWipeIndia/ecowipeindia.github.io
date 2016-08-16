@@ -5468,7 +5468,8 @@ body.is-loading #header:after {
   background-color: white;
   padding: 1em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.08);
-  border-radius: 6px; }
+  border-radius: 6px;
+  margin: 20px; }
 
 .card h3.black,
 .card p.black {
@@ -5483,5 +5484,30 @@ body.is-loading #header:after {
 
 #header .button i {
   margin-left: 5px; }
+
+#email-invalid,
+#thankyou-message,
+#error-message {
+  display: none;
+  padding: 15px; }
+
+#email-invalid,
+#error-message {
+  background-color: #f2dede; }
+
+#thankyou-message {
+  background-color: #dff0d8; }
+
+#contact-infromation {
+  padding: 32px;
+  text-align: right; }
+  #contact-infromation h3 {
+    text-decoration: underline; }
+  #contact-infromation a {
+    display: block;
+    border: 0; }
+  #contact-infromation h4 {
+    margin-top: 1em;
+    margin-bottom: 0.5em; }
 
 /*# sourceMappingURL=main.css.map */

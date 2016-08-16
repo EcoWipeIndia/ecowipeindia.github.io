@@ -1,3 +1,6 @@
+$error-color: #f2dede;
+$success-color: #dff0d8;
+
 .list {
   list-style-type: none;
   text-align: left;
@@ -12,6 +15,7 @@
   padding: 1em;
   box-shadow: 0 3px 5px rgba(0,0,0,.3),0 0 0 1px rgba(0,0,0,.08);
   border-radius: 6px;
+  margin: 20px;
 }
 
 .card h3.black,
@@ -30,4 +34,37 @@
 
 #header .button i {
   margin-left: 5px;
+}
+
+#email-invalid,
+#thankyou-message,
+#error-message {
+  display: none;
+  padding: 15px;
+}
+
+#email-invalid,
+#error-message {
+  background-color: $error-color;
+}
+
+#thankyou-message {
+  background-color: $success-color;
+}
+
+#contact-infromation {
+  padding: 32px;
+  text-align: right;
+
+  h3 {
+    text-decoration: underline;
+  }
+  a {
+    display: block;
+    border: 0;
+  }
+  h4 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
 }
